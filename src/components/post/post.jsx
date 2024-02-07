@@ -14,6 +14,11 @@ import { setPostChecked } from "../../services/reducers/chooseSlice";
 function Post({ post }) {
   const dispatch = useDispatch();
 
+  // const userInfo = [];
+
+  // useEffect(() => {
+  //   userInfo = users.find((i) => i.id === post.userId) || {};
+  // }, [users]);
   const users = useSelector((state) => state.users.array);
   const userInfo = users.find((i) => i.id === post.userId) || {};
   const favorites = useSelector((state) => state.favorites.ids);
@@ -111,11 +116,7 @@ function Post({ post }) {
             className={`${styles.post_button} ${styles.favotites_button}`}
             onClick={handleStarClick}
           >
-            <img
-              src={starIsActive}
-              alt="favorite"
-              className={styles.icon}
-            />
+            <img src={starIsActive} alt="favorite" className={styles.icon} />
           </button>
         </li>
       </ul>

@@ -13,13 +13,11 @@
     padding-bottom: 100px;
 }
 
-.table_header {
+.filter_line {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 0 0 50px 0;
-    padding: 0;
-    list-style-type: none;
 }
 
 .choose_line_container {
@@ -39,7 +37,7 @@
 }
 
 @media (max-width: 1120px) {
-    .table_header {
+    .filter_line {
         align-items: center;
         flex-direction: column;
         gap: 20px;
@@ -47,7 +45,7 @@
 }
 
 @media (max-width: 767px) {
-    .table_header {
+    .filter_line {
         align-items: start;
         flex-direction: row;
         justify-content: space-between;

@@ -39,9 +39,9 @@ function App() {
 
   const actualPostsPerPage =
     postsPerPage == -1 ? postsArray.length : postsPerPage;
-  const indexOfLastPost = currentPage * actualPostsPerPage;
-  const indexOfFirstPost = indexOfLastPost - actualPostsPerPage;
-  const currentPosts = postsArray.slice(indexOfFirstPost, indexOfLastPost);
+  const indexLastPost = currentPage * actualPostsPerPage;
+  const indexFirstPost = indexLastPost - actualPostsPerPage;
+  const currentPosts = postsArray.slice(indexFirstPost, indexLastPost);
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -61,7 +61,7 @@ function App() {
     <div className={styles.page}>
       <Header />
       <main className={styles.main}>
-        <ul className={styles.table_header}>
+        <div className={styles.filter_line}>
           <Filters
             setPostsArray={setPostsArray}
             posts={posts}
@@ -69,7 +69,7 @@ function App() {
             postsArray={postsArray}
           />
           <Sort />
-        </ul>
+        </div>
         <div className={styles.choose_line_container}>
           <ChooseAll postsArray={postsArray} />
           <Pagination

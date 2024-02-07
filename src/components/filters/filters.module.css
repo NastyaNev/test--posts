@@ -17,17 +17,20 @@
     margin: 0 20px;
     padding: 0;
     gap: 20px;
+    align-items: center;
 }
 
 .favorites_container {
     display: flex;
     gap: 5px;
+    font-size: 0.9em;
 }
 
 .favorites_checkbox {
     margin: 0;
     width: 18px;
     cursor: pointer;
+    accent-color: #4ca1af;
 }
 
 @media (max-width: 767px) {

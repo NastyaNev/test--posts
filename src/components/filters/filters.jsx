@@ -30,7 +30,7 @@ function Filters({ setPostsArray, posts, setCurrentPage, postsArray }) {
   };
 
   return (
-    <li className={styles.filters_container}>
+    <div className={styles.filters_container}>
       <p className={`${styles.filters_header} ${fontStyles.light_italic}`}>
         filter by:
       </p>
@@ -70,7 +70,7 @@ function Filters({ setPostsArray, posts, setCurrentPage, postsArray }) {
           />
         </li>
       </ul>
-    </li>
+    </div>
   );
 }
 

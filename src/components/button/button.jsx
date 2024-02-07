@@ -2,9 +2,9 @@ import React from 'react';
 import styles from "./button.module.css";
 import fontStyles from "../../fonts/fonts.module.css";
 
-function Button({buttonText}) {
+function Button({ buttonText, handleClick }) {
   return (
-    <button className={styles.button}><p className={`${styles.button_text} ${fontStyles.bold}`}>{buttonText}</p></button>
+    <button className={styles.button} onClick={handleClick}><p className={`${styles.button_text} ${fontStyles.bold}`}>{buttonText}</p></button>
   )
 }
 
